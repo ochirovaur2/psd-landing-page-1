@@ -1,0 +1,68 @@
+/* Paddings */
+.py-small { padding: 1rem 0; }
+
+.py-normal { padding: 2rem 0; }
+
+.py-big { padding: 3rem 0; }
+
+.py-extrabig { padding: 4rem 0; }
+
+.py-left-rigth-small {
+	padding: 0 1.6rem;
+}
+.py-left-rigth-normal{
+	padding: 0 3rem;
+}
+.py-big{
+	padding: 8rem 0;}
+
+/* /Paddings */
+
+/* Margins */
+
+.my-0-auto{
+	margin: 0 auto;
+}
+.my-small { margin: 1rem 0; }
+
+.my-normal { margin: 2rem 0; }
+
+.my-big { margin: 3rem 0; }
+
+.my-extrabig { margin: 6rem 0; }
+
+/* /Margins */
+
+/* Text position */
+.u-center-text{ text-align: center;}
+
+/* /Text position */
+
+/* Main color */
+
+.main-color {
+	color: $color-primary;
+}
+
+/* /Main color */
+
+/* Underline text */
+
+.underline{
+	position: relative;
+	padding-bottom: 2rem;
+	margin-bottom: 0.5rem;
+	font-size: 2.5rem;
+			&::before{
+		content: "";
+		position: absolute;
+		bottom: 0rem;
+		left: 50%;
+		transform: translate(-50%);
+		width: 100px;
+		height: 3px;
+		background: $color-primary;
+	}
+}
+
+/* /Underline text */

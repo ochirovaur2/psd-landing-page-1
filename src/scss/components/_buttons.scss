@@ -1,0 +1,50 @@
+.btn{
+	display: inline-block;
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	padding: 2.8rem 9rem;
+	border-radius: 5px;
+    transition: color 1s;
+    position: relative;
+    letter-spacing: 0.27px;
+	font-weight: 400;
+	line-height: 2.6rem;
+	text-transform: uppercase;
+    /* btn__content */
+
+    &__content{
+    	position: relative;
+    }
+
+    /* btn-primary */
+
+    &-primary{
+    	background-color: $color-btn-primary;
+    	color: $color-light-1;
+    }
+
+    ////////////////////////
+    ///Hover effects::before
+
+    &::before{
+    	content: "";
+    	position: absolute;
+    	top: 0;
+		left: 0;
+		transform: scaleY(0);
+		height: 100%;
+       	width: 5px;
+       	border-radius: inherit;
+		background: inherit;
+		background: #aa1f1f;
+		transition: transform .3s,
+                    width .4s cubic-bezier(1,0,0,1) .3s,
+                    background-color .1s;
+
+    }
+    &:hover::before {
+		transform: scale(1);
+		width: 100%;
+	}
+	
+}

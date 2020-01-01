@@ -1,0 +1,35 @@
+.header {
+	background-color: $header-bg-color;
+	/* .header__container */
+
+	&__container{
+		min-height: 59.6rem;
+	}
+	/* .header__logo-box */
+
+	&__logo-box {
+	}
+
+	/* .header__logo */
+
+	&__logo {
+		width: 11.7rem;
+		height: auto;
+	}
+
+	/* .header__content */
+
+	&__content{
+		max-width: 91rem;
+		margin: 3rem auto 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	/* .header__btn */
+	
+	&__btn{
+		align-self: center;
+	}
+}
