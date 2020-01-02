@@ -1,0 +1,29 @@
+.services{
+	background: $services-bg-color;
+	padding: 11.9rem 0 12.8rem;
+	/* .services__container */
+
+	&__container {
+		
+	}
+	/* .services__heading */
+
+	&__heading{
+		
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 3rem;
+		letter-spacing: 4px;
+		padding: 0;
+		padding-bottom: 2rem;
+		margin: 0;
+		margin-bottom: 2.3rem;
+		
+	}
+	/* services__p */
+
+	&__p{
+		margin-bottom: 7.8rem;
+	}
+}
+

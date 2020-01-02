@@ -6,10 +6,36 @@
 	line-height: 4.9rem;
 	text-transform: uppercase;
 	padding: 2rem;
+	position: relative;
+	&__underline{
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 8.7rem;
+		height: 4px;
+		&_light-green{
+			background: #14a58b;
+		}
+		
+		
+	}
+	
 }
 .heading-secondary{
-	
+	color: $color-light-1;
+	font-family: "Titillium Web";
+	font-size: 2.4rem;
+	font-weight: 700;
+	line-height: 1.8rem;
+	text-transform: uppercase;
+	letter-spacing: 0.48px;
 }
 .paragraph{
 	
+	color: $color-light-1;
+	font-size: 1.8rem;
+	font-weight: 400;
+	line-height: 2.6rem;
+	letter-spacing: 0.36px;
 }

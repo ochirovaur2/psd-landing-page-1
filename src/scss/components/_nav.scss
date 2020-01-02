@@ -4,8 +4,107 @@
   align-items: center;
   padding: 5.7rem 4rem;
   @media only screen and(max-width: $bp-medium) {
-    flex-direction: column;
+    
+  }
+  /* nav__btn-box */
+
+  &__btn-box{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 7rem;
+    width: 7rem;
+    z-index: 100;
+    background: $color-light-1;
+    border-radius: 50%;
+    box-shadow: 0.5rem 1rem 3rem rgba($color-dark-1, 0.2);
+    @media only screen and(max-width: $bp-medium){
+      display: flex;
+      top: 6rem;
+      right: 5rem;
+      position: fixed;
+
+    }
+    @media only screen and(max-width: $bp-small){
+      display: flex;
+      top: 4.5rem;
+      right: 3rem;
+      position: fixed;
+
+    }
+    &:hover{
+      cursor: pointer;
+    }
+    &:hover .nav__btn::before{
+      top: -1rem;
+    }
+    &:hover .nav__btn::after{
+      top: 1rem;
+    }
+  }
+  /* nav__btn */
+
+  &__btn{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2px;
+    width: 60%;
+    background: $color-dark-1;
+
+    z-index: 2;
+    transition: all $transition-speed;
+    &:hover::after{
+      top: 1.3rem;
+
+    }
+    &::before,
+    &::after{
+      content: "";
+      position: absolute;
+      top: -0.7rem;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: inherit;
+      transition: all $transition-speed;
+    }
+    &::after{
+      top: .7rem;
+    }
+  }
+  /* nav__chk */
+
+  &__chk{
+    position: absolute;
+    top: 6rem;
+    right: 6rem;
+    height: 7rem;
+    width: 7rem;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+  }
+  &__chk:checked ~ &__btn-box{
+
   }
   
+  &__chk:checked ~ &__btn-box &__btn{
+    transform: rotate(135deg);
+    height: 3px;
+    &::before,
+    &::after{
+      top: 0;
+      transform: rotate(90deg);
+    }
+  } 
+  &__chk:checked:hover ~ &__btn-box &__btn {
+  
+    transform: rotate(225deg);
+  }
+  &__chk:checked ~ .list{
+    left: 0;
+  }
 }
 

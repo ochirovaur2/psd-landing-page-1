@@ -1,0 +1,53 @@
+.cards {
+
+  /* .cards__card-box */
+  
+  display: flex;
+  @media only screen and(max-width: $bp-medium) {
+    flex-wrap: wrap;
+  }
+  &__card-box {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    min-height: 29.5rem;
+    @media only screen and(max-width: $bp-medium) {
+      flex-basis: 50%;
+      margin-bottom: 3rem;
+    }
+    @media only screen and(max-width: $bp-small) {
+      flex-basis: 100%;
+      margin-bottom: 3rem;
+    }
+  }
+
+  /* .cards__img-box */
+
+  &__img-box {
+    height: 12rem;
+    margin-bottom: 6.2rem;
+  }
+
+  /* cards__heading */
+
+  &__heading{
+    margin-bottom: 2.7rem;
+  }
+
+  /* cards__p */
+
+  &__p{
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2.4rem;
+    /* Text style for "L, orem ip" */
+    letter-spacing: 0.32px;
+  }
+  /* .cards__img */
+
+  &__img {
+    height: 12rem;
+  }
+}
+
